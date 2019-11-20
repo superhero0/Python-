@@ -1,0 +1,109 @@
+
+
+1.
+for k in dict1:
+    print(k)
+
+
+2.
+for k in dict1:
+    print(dict1[k])
+
+
+
+3. 
+for k in dict1:
+    print(k,dict1[k])
+
+
+
+4.
+dict1 = {"k1":"v1","k2":"v2","k3":"v3"}
+
+dict1["k4"] = "v4"
+print("dict1新增\"k4\":\"v4\"后的值: ",dict1)
+
+
+5.
+dict1 = {"k1":"v1","k2":"v2","k3":"v3","k4":"v4"}
+print("dict1删除k1前的值: ",dict1)
+dict1.pop("k1")
+print("dict1删除k1后的值: ",dict1)
+
+
+
+6. 
+dict1 = {"k1":"v1","k2":"v2","k3":"v3"}
+dict2 = {"k1":"v11","a":"b"}
+dict2.update(dict)
+print("dict1: ",dict1)
+print("dict2: ",dict2)
+
+
+7.
+7.1
+print(lis[0][1][2].get("k1")[0].upper())
+
+7.2
+lis[0][1][2].get("k1")[2]=101
+
+
+
+8.
+all_list = [11,22,33,44,55,66,77,88,99,100.110,200,230,330]  
+dic = {}
+list1 = []                            #声明列表
+list2 = []
+for i in all_list:                   #设置循环条件
+    if i>66:
+        list1.append(i)
+    else:
+        list2.append(i)
+dic['k1'] = list1
+dic['k2'] = list2
+print(dic)
+
+
+9.
+print('|--- 欢迎进?入通讯录程序 ---|')
+print('|--- 1：查询联系?人资料料 ---|')
+print('|--- 2：插?入新的联系?人 ---|')
+print('|--- 3：删除已有联系?人 ---|')
+print('|--- 4：退出通讯录程序 ---|')
+contacts = dict()
+while 1:
+    instr = int(input('\n请输?入相关的指令代码：'))
+    if instr == 1:
+        name = input('请输?入联系?人姓名：')
+        if name in contacts:
+            print(name + ' : ' + contacts[name])
+        else:
+            print('您输?入的姓名不不再通讯录中！')
+    if instr == 2:
+        name = input('请输?入联系?人姓名：')
+        if name in contacts:
+            print('您输?入的姓名在通讯录中已存在 -->> ', end='')
+            print(name + ' : ' +contacts[name])
+            if input('是否修改?用户资料料（YES/NO）：') == 'YES':
+                contacts[name] =input('请输?入?用户联系电话：')
+        else:
+            contacts[name] =input('请输?入?用户联系电话：')
+    if instr == 3:
+        name = input('请输?入联系?人姓名：')
+        if name in contacts:
+            del(contacts[name])
+            # 也可以使?用dict.pop()
+        else:
+            print('您输?入的联系?人不不存在。')
+    if instr == 4:
+        break
+print('|--- 感谢使?用通讯录程序 ---|')
+
+
+
+
+
+
+
+
+

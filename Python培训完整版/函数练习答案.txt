@@ -1,0 +1,98 @@
+1
+def sum_func(*args):
+    sm = 0
+    for i in args:
+        sm += i
+    return sm
+
+print(sum_func(1,2,3,7,4,5,6))
+
+2.
+def func(l):
+    if len(l)>2:
+        l = l[0:2]
+        return l
+    else:
+        return l
+print(func([1,2,3,4]))
+print(func([1,2]))
+
+3.
+s = ' das1 32 a2da'
+def lei(l):
+    num = 0
+    isah = 0
+    kong = 0
+    other = 0
+    for i in l :
+        if i.isdigit():
+            num +=1
+        elif i.isalpha():
+            isah +=1
+        elif i.isspace():
+            kong +=1
+        else:
+            other +=1
+    return num,isah,kong,other
+print(lei(s))　
+
+#结果：(4, 6, 3, 0)
+
+4.
+def my_max(*a):
+    return max(a)
+ 
+print(my_max(5,8,10,3,12,52))
+
+5.
+def f2(arg):
+    #isinstance()判断对象是否为字符串，列表，元组
+    if isinstance(arg,str) or isinstance(arg,list) or isinstance(arg,tuple):
+         if len(arg)>=5:
+            return True
+         else:
+             return False
+    else:
+        return None
+r=f2('123456')
+print(r)
+
+6.
+def f3(a):
+    ret=False
+    for n in a:
+          if n.isspace():
+            
+            ret=True
+            break
+    return ret
+
+r2=f3("134   4    5")
+print(r2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

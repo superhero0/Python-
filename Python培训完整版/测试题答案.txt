@@ -1,0 +1,100 @@
+1.
+print("="*50)
+print("=\t欢迎进入到身份认证系统V1.0\n= 1.登录\n= 2.退出\n= 3.认证\n= 4.修改密码")
+print("="*50)
+
+2. 
+name = input(">>> ")
+QQ = input(">>> ")
+phone_num = input(">>> ")
+com_addr = input(">>> ")
+
+print("="*30)
+print("\n姓名：%s\n\nQQ：%s\n\n手机号：%s\n\n公司地址：%s\n"%(name,QQ,phone_num,com_addr))
+print("="*30)
+
+
+
+4. 
+ x = 0
+ for i in range(1,101):
+     x += i
+     print(x)
+
+
+
+
+6. 
+q = "hello world god is allways busy"
+l = ""
+for i in "".join(q.split()):
+    if i + ":" + str(q.count(i)) not in l:
+        l += (i + ":" + str(q.count(i)) + " ")
+        # v.append(str(q.count(i)))
+print(l)
+
+
+7.
+for i in range(1,10):
+    for x in range(1,i+1):
+        print("%d * %d = %d "%(x,i,i*x),end="\t")
+    print("")
+
+
+8.
+i = 1
+x = 4
+while i <= 9:
+    if i <= 5:
+        print("*" * i)
+    elif i > 5:
+        print("*" * x)
+        x -= 1
+    i += 1
+
+
+12.
+a=lambda x,y=3:x*y
+print(a(1))
+
+
+13.
+##def fun():
+##    n=input_fun()
+##    for i in range(1,n+1):
+##        if n%i==0:
+##            print('%s 是%s的因子'%(i,n))
+##
+##def input_fun():
+##    n=int(input('请输入一个整数：'))
+##    return n
+##
+##    
+##fun()
+
+14
+##def fun(n):
+##    sums=0
+##    while n>0:
+##        #取最后一位
+##        #last=n%10
+##        n//=10
+##        sums+=1
+
+##print(fun(int(input('请输入一个整数：'))))
+
+
+
+
+17
+nums=[2,7,11,15,1,8,7]
+li = []
+for i in nums:
+    for x in nums:
+        if i + x == 9:
+            a = list((i, x))
+            a.sort()
+            b = tuple(a)
+            if b not in li:
+                li.append(b)
+print(li)
